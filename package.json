@@ -1,0 +1,34 @@
+{
+  "name": "my-vue-library-victor",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-lib.umd.ts",
+  "module": "./dist/my-lib.es.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.ts",
+      "require": "./dist/my-lib.umd.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "user": "^0.0.0",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "sass": "^1.54.7",
+    "sass-loader": "^13.0.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7",
+    "vue-tsc": "^0.39.5"
+  }
+}
